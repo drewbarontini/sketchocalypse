@@ -42,28 +42,31 @@
     .slide-content
       .middle.tac
         %blockquote.tsxl
-          There is <em>no</em> other tool out there that is so intrinsically connected
-          to the way designers work <strong>today</strong>.
+          "There is <em>no</em> other tool out there that is so intrinsically connected
+          to the way designers work <strong>today</strong>."
 
   %slide
     .slide-content
       .middle.tac
         %h1 Community
 
-  %slide(img="#{image_path('community-01.png')}")
-  %slide(img="#{image_path('community-02.png')}")
-  %slide(img="#{image_path('community-03.png')}")
+  %slide
+    = image_tag 'community-01.png', alt: 'Sketch Community', width: '100%', height: '110%'
+  %slide
+    = image_tag 'community-02.png', alt: 'Sketch Community', width: '100%', height: '110%'
+  %slide
+    = image_tag 'community-03.png', alt: 'Sketch Community', width: '100%', height: '110%'
 
   %slide
     .slide-content
       .middle.tac
         %p.tsxl= link_to 'http://go.drewb.io/links-sketch', 'http://go.drewb.io/links-sketch'
 
-  %slide(img="#{image_path('ui-01.png')}")
-  %slide(img="#{image_path('ui-02.png')}")
-  %slide(img="#{image_path('ui-03.png')}")
-  %slide(img="#{image_path('ui-04.png')}")
-  %slide(img="#{image_path('ui-05.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('ui-01.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('ui-02.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('ui-03.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('ui-04.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('ui-05.png')}")
 
   %slide.slide--title
     .slide-content
@@ -75,8 +78,8 @@
       .middle.tac
         %h1 Vector
 
-  %slide(img="#{image_path('vector-01.png')}")
-  %slide(img="#{image_path('vector-02.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('vector-01.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('vector-02.png')}")
 
   %slide
     .slide-content
@@ -155,11 +158,11 @@
       .middle.tac
         %h1 Export
 
-  %slide(img="#{image_path('export-01.png')}")
-  %slide(img="#{image_path('export-02.png')}")
-  %slide(img="#{image_path('export-03.png')}")
-  %slide(img="#{image_path('export-04.png')}")
-  %slide(img="#{image_path('export-05.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('export-01.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('export-02.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('export-03.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('export-04.png')}")
+  %slide.slide--contain.slide--video(img="#{image_path('export-05.png')}")
 
   %slide
     .slide-content
@@ -194,7 +197,7 @@
   %slide.slide--title(img="#{image_path('shush.gif')}")
     .middle.full
       .card.card--dark
-        %h1.tac{ style: 'letter-spacing: 0.1em' } Secret Features
+        %h1.tac Hidden Features
 
   %slide.slide--dark(img="#{image_path('math.gif')}")
     .middle.tac
@@ -276,9 +279,11 @@
           %code ESC
           &mdash; Leave editing
 
-  %slide(img="#{image_path('shortcuts.png')}")
+  %slide
+    = image_tag 'shortcuts.png', alt: 'Sketch Shortcuts', width: '100%', height: '100%'
 
-  %slide(img="#{image_path('sketch-site.png')}")
+  %slide
+    = image_tag 'sketch-site.png', alt: 'Sketch Site', width: '100%', height: '100%'
 
   %slide.slide--dark.slide--fade.slide--fade--light(img="#{image_path('micdrop.gif')}")
     .slide-content
