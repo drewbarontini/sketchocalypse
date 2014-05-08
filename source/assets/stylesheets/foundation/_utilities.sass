@@ -1,0 +1,406 @@
+// *************************************
+//
+//   Utilities
+//   -> Global utilities
+//
+// *************************************
+
+// ----- Auto ----- //
+
+.auto
+  width: auto
+
+// ----- Bottom ----- //
+
+.bottom
+  bottom: 0
+  left: 0
+  position: absolute
+
+// ----- Full ----- //
+
+.full
+  width: 100%
+
+// ----- Clearfix ----- //
+
+.group::after
+  clear: both
+  content: ''
+  display: table
+
+// ----- Debug ----- //
+
+.debug
+  background-color: pink !important
+
+// ----- Ellipsis ----- //
+
+.ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// ----- Faux Hide ----- //
+
+.fauxHide
+  height: 0
+  opacity: 0
+  overflow: hidden
+  visibility: hidden
+
+// ----- Faux Show ----- //
+
+.fauxShow
+  height: auto
+  opacity: 1
+  overflow: visible
+  visibility: visible
+
+// ----- Image Replacement ----- //
+
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  &::before
+    content: ''
+    display: block
+    width: 0
+    height: 150%
+
+// ----- List Reset ----- //
+
+.lr
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+// ----- Middle ----- //
+
+.middle
+  +transform(translate(-50%, -50%))
+  left: 50%
+  position: absolute
+  top: 50%
+  width: 100%
+
+// Auto
+
+.middle.middle--auto
+  @extend .auto
+
+// Medium
+
+.middle.middle--med
+  width: 60%
+
+// ----- No Transition ----- //
+
+.noTransition
+  +transition(none)
+
+// ----- Right ----- //
+
+.right
+  left: auto
+  right: 0
+  position: absolute
+
+// ----- Shadowed ----- //
+
+.shadowed
+  text-shadow: 6px 6px 0 $c-subdue, 12px 12px 0 rgba($c-base, 0.35)
+
+// ----- Stretch ----- //
+
+.stretch
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+
+// ----- Valign ----- //
+
+.valign
+  +transform(translateY(-50%))
+  position: absolute
+  top: 50%
+
+// -------------------------------------
+//   Background
+// -------------------------------------
+
+.bcb
+  background-color: $c-base
+.bce
+  background-color: $c-error
+.bch
+  background-color: $c-highlight
+.bci
+  background-color: $c-invert
+.bcl
+  background-color: $c-light
+.bcs
+  background-color: $c-subdue
+.bcu
+  background-color: $c-success
+.bcw
+  background-color: $c-warning
+
+// -------------------------------------
+//   Border
+// -------------------------------------
+
+// ----- Standard ----- //
+
+.bdr
+  border: $b-border
+.bdrb
+  border-bottom: $b-border
+.bdrn
+  border: 0
+.bdrt
+  border-top: $b-border
+
+// ----- Inverted ----- //
+
+.bdri
+  border: $b-borderWidth $b-borderStyle $c-invert
+.bdrbi
+  border-bottom: $b-borderWidth $b-borderStyle $c-invert
+.bdrti
+  border-top: $b-borderWidth $b-borderStyle $c-invert
+
+// -------------------------------------
+//   Display
+// -------------------------------------
+
+.db
+  display: block
+.di
+  display: inline
+.dib
+  display: inline-block
+.dn
+  display: none
+
+// -------------------------------------
+//   Margins
+// -------------------------------------
+
+// ----- All ----- //
+
+.mas
+  margin: $b-whitespace-s
+.mam
+  margin: $b-whitespace
+.mal
+  margin: $b-whitespace-l
+
+// ----- Bottom ----- //
+
+.mbf
+  margin-bottom: 0
+.mbxs
+  margin-bottom: $b-whitespace-xs
+.mbs
+  margin-bottom: $b-whitespace-s
+.mbm
+  margin-bottom: $b-whitespace
+.mbl
+  margin-bottom: $b-whitespace-l
+
+// ----- Horizontal ----- //
+
+.mhc
+  margin-left: auto
+  margin-right: auto
+
+// ----- Left ----- //
+
+.mlf
+  margin-left: 0
+.mls
+  margin-left: $b-whitespace-s
+.mlm
+  margin-left: $b-whitespace
+
+// ----- Right ----- //
+
+.mrf
+  margin-right: 0
+.mrs
+  margin-right: $b-whitespace-s
+.mrm
+  margin-right: $b-whitespace
+
+// ----- Top ----- //
+
+.mtf
+  margin-top: 0
+.mts
+  margin-top: $b-whitespace-s
+.mtm
+  margin-top: $b-whitespace
+.mtl
+  margin-top: $b-whitespace-l
+
+// -------------------------------------
+//   Padding
+// -------------------------------------
+
+// ----- All ----- //
+
+.paxs
+  padding: $b-whitespace-xs
+.pas
+  padding: $b-whitespace-s
+.pam
+  padding: $b-whitespace
+
+// ----- Bottom ----- //
+
+.pbxs
+  padding-bottom: $b-whitespace-xs
+.pbs
+  padding-bottom: $b-whitespace-s
+.pbm
+  padding-bottom: $b-whitespace
+
+// ----- Top ----- //
+
+.ptxs
+  padding-top: $b-whitespace-xs
+.pts
+  padding-top: $b-whitespace-s
+.ptm
+  padding-top: $b-whitespace
+
+// -------------------------------------
+//   Opacity
+// -------------------------------------
+
+.oph
+  opacity: 0.5
+
+// -------------------------------------
+//   Positioning
+// -------------------------------------
+
+.fl
+  float: left
+.fr
+  float: right
+
+.poa
+  position: absolute
+.pof
+  position: fixed
+.por
+  position: relative
+.pos
+  position: static
+
+// -------------------------------------
+//   Rounding
+// -------------------------------------
+
+.ra
+  border-radius: 50%
+.ram
+  border-radius: $b-borderRadius
+
+// -------------------------------------
+//   Text
+// -------------------------------------
+
+// ----- Alignment ----- //
+
+.tac
+  text-align: center
+.tal
+  text-align: left
+.tar
+  text-align: right
+
+// ----- Color ----- //
+
+.tcb
+  color: $c-base
+.tcg
+  color: $c-background
+.tch
+  color: $c-highlight
+.tci
+  color: $c-invert
+.tce
+  color: $c-error
+.tcs
+  color: $c-subdue
+.tcu
+  color: $c-success
+.tcw
+  color: $c-warning
+
+// ----- Decoration ----- //
+
+.tds
+  text-decoration: line-through
+
+// ----- Family ----- //
+
+.tfb
+  font-family: $f-base
+.tfh
+  font-family: $f-header
+.tfm
+  font-family: $f-mono
+
+// ----- Size ----- //
+
+// All
+
+.tsxs
+  font-size: $b-fontSize-xs
+.tss
+  font-size: $b-fontSize-s
+.tsm
+  font-size: $b-fontSize-m
+.tsl
+  font-size: $b-fontSize-l
+.tsxl
+  font-size: $b-fontSize-xl
+
+// Headings
+
+.tsh1
+  font-size: $b-fontSize-h1
+.tsh2
+  font-size: $b-fontSize-h2
+.tsh3
+  font-size: $b-fontSize-h3
+.tsh4
+  font-size: $b-fontSize-h4
+
+// ----- Style ----- //
+
+.tsi
+  font-style: italic
+
+// ----- Transform ----- //
+
+.ttu
+  text-transform: uppercase
+.ttn
+  text-transform: none
+
+// ----- Weight ----- //
+
+.twb
+  font-weight: bold
+.twl
+  font-weight: 300
+.twn
+  font-weight: normal

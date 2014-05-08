@@ -1,0 +1,90 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  background: $c-background
+  color: $c-base
+  font-family: $f-base
+  font-size: $b-fontSize
+  line-height: $b-lineHeight
+
+body
+  font-size: 100%
+  overflow: hidden
+  +respond-to(100em)
+    font-size: 150%
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+ul, p
+  margin-bottom: 0
+  margin-top: 0
+
+li
+  margin-bottom: $b-whitespace-s
+  margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+pre
+  font-family: $f-mono
+
+blockquote
+  font-size: $b-fontSize-xl
+  font-weight: 300
+  margin-bottom: 0
+  margin-left: 0
+
+// ----- Headers ----- //
+
+h1, h2, h3, h4
+  margin-bottom: 0
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4
+  font-weight: bold
+  line-height: 1.5
+  margin-top: 0
+  > b
+    display: block
+
+h1, .h1
+  line-height: 1.2
+  font-family: $f-header
+  font-size: $b-fontSize-h1
+  text-transform: uppercase
+
+h2, .h2
+  font-size: $b-fontSize-h2
+
+h3, .h3
+  font-size: $b-fontSize-h3
+
+h4, .h4
+  font-size: $b-fontSize-h4
+  font-weight: 300
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a
+  border-bottom: $b-border
+  color: $c-highlight
+  text-decoration: none
+  &:hover,
+  &:focus
+    border-bottom-color: $c-highlight
+    color: $c-subdue
+
+img
+  height: auto
+  max-width: 100%

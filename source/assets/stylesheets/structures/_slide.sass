@@ -1,0 +1,219 @@
+// *************************************
+//
+//   Slide
+//   -> Description
+//
+// *************************************
+
+.slide
+  @extend .fauxHide
+  @extend .stretch
+  background-color: $c-light
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: inset 0 (-$progress-height) rgba(#fff, 0.4)
+  height: 100%
+  overflow: hidden
+  width: 100%
+  z-index: 10
+  .no-touch &
+    @if $slide-transition
+      +transition(all $slide-transition-speed $slide-transition-delay ease-in-out)
+
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Contain ----- //
+
+.slide--contain
+  background-size: contain
+
+// ----- Dark ----- //
+
+.slide--dark
+  background-color: $c-base
+  color: $c-invert
+
+// ----- Error ----- //
+
+.slide--error
+  background-color: $c-error
+  color: $c-invert
+
+// ----- Fade ----- //
+
+.slide--fade
+  color: $c-invert
+  &::after
+    @extend .stretch
+    background: $c-highlight
+    content: ''
+    opacity: $slide--fade-opacity
+    z-index: 1
+
+// Dark
+
+.slide--fade--dark
+  color: $c-invert
+  &::after
+    background-color: #000
+
+// Error
+
+.slide--fade--error
+  color: $c-invert
+  &::after
+    background-color: $c-error
+
+// Light
+
+.slide--fade--light
+  color: $c-base
+  &::after
+    background-color: $c-invert
+
+// Subdue
+
+.slide--fade--subdue
+  &::after
+    background-color: $c-subdue
+
+// Success
+
+.slide--fade--success
+  color: $c-invert
+  &::after
+    background-color: $c-success
+
+// Warning
+
+.slide--fade--warning
+  color: $c-invert
+  &::after
+    background-color: $c-warning
+
+// ----- Light ----- //
+
+.slide--light
+  background-color: $c-invert
+  color: $c-base
+
+// ----- Position ----- //
+
+.slide--position--bottom
+  background-position: bottom
+
+// ----- Subdue ----- //
+
+.slide--subdue
+  background-color: $c-subdue
+  color: $c-base
+
+// ----- Success ----- //
+
+.slide--success
+  background: $c-success
+  color: $c-invert
+
+// ----- Tile ----- //
+
+.slide--tile
+  background-position: top-left
+  background-repeat: repeat
+  background-size: auto
+
+// ----- Title ----- //
+
+.slide--title
+  background-color: $c-highlight
+  color: $c-invert
+
+// ----- Video ----- //
+
+.slide--video
+  background-color: black
+  color: $c-invert
+
+// ----- Warning ----- //
+
+.slide--warning
+  background-color: $c-warning
+  color: $c-invert
+
+// -------------------------------------
+//   States
+// -------------------------------------
+
+// ----- Active ----- //
+
+.slide.is-active
+  @extend .fauxShow
+  overflow: hidden
+  .no-touch &
+    @if $slide-transition
+      +transition(all $slide-transition-speed ease-in-out)
+
+  .slide-content
+    @extend .fauxShow
+    .no-touch &
+      @if $slide-transition
+        +transition(all $slide-transition-speed $slide-transition-delay ease-in-out)
+
+// ----- No Transition ----- //
+
+.no-touch
+  .slide.is-active.noTransition
+    @extend .noTransition
+
+    .slide-content
+      @extend .noTransition
+
+// -------------------------------------
+//   Scaffolding
+// -------------------------------------
+
+// ----- Content ----- //
+
+.slide-content
+  @extend .fauxHide
+  @extend .stretch
+  margin: $b-whitespace
+  z-index: 10
+  .no-touch &
+    @if $slide-transition
+      +transition(all $slide-transition-speed ease-in-out)
+  +respond-to($breakpoint-large)
+    margin: $b-whitespace-l
+
+// ----- Image ----- //
+
+.slide-img
+  border-radius: 50%
+
+// Medium
+
+.slide-img--m
+  border-radius: $b-borderRadius
+
+// ----- Media ----- //
+
+.slide-media
+  @extend .card
+
+// ----- Video ----- //
+
+.slide-video
+  height: 0
+  max-height: 720px
+  max-width: 1280px
+  margin: 0 auto
+  padding-bottom: 56.25%
+  position: relative
+  > iframe
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
