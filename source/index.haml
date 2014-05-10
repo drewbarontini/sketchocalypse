@@ -272,22 +272,35 @@
   %slide
     .slide-content
       %h1.mbxs Keyboard Shortcuts
-      %ul.lr.tsl
-        %li
-          %code ALT
-          &mdash; Measure distances
-        %li
-          %code cmd+R
-          &mdash; Rename layer
-        %li
-          %code cmd+G
-          &mdash; Create Layer Group
-        %li
-          %code ENTER
-          &mdash; Edit object
-        %li
-          %code ESC
-          &mdash; Leave editing
+      .grid
+        .grid-box.grid-box--1of2
+          %ul.lr.tsl
+            %li
+              %code ALT
+              &mdash; Measure distances
+            %li
+              %code ctrl+C
+              &mdash; Color picker
+            %li
+              %code ctrl+P
+              &mdash; Toggle pixels
+            %li
+              %code ENTER
+              &mdash; Edit object
+        .grid-box.grid-box--1of2
+          %ul.lr.tsl
+            %li
+              %code ESC
+              &mdash; Leave editing
+            %li
+              %code cmd+D
+              &mdash; Duplicate layer
+            %li
+              %code cmd+R
+              &mdash; Rename layer
+            %li
+              %code cmd+G
+              &mdash; Create layer group
 
   %slide
     = image_tag 'shortcuts.png', alt: 'Sketch Shortcuts', width: '100%', height: '100%'
